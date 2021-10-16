@@ -11,47 +11,51 @@
      
       </div>
     </div>
-    <div id="contenido">
-      <v-container class="grey lighten-5">
-        <v-row no-gutters>
-          <v-col v-for="n in 6" :key="n" cols="12" sm="4">
-            <v-card class="pa-2" outlined tile>
-              <tarjeta-articulo>
-                <!--- VISUALIZA EL ARTICULO USANDO LA TARJETA-ARTICULO -->
-              </tarjeta-articulo>
-            </v-card>
-          </v-col>
-        </v-row>
-      </v-container>
-    </div>
+    <v-container class="grey lighten-5" id="contenido">
+      <v-col v-for="imagen in imagenes" :key="imagen.Name" cols="12">
+        <tarjeta-articulo :imagen="imagen">
+                  <!--- VISUALIZA EL ARTICULO USANDO LA TARJETA-ARTICULO -->
+        </tarjeta-articulo>
+      </v-col>
+
+    </v-container>
+
   </v-container>
+ 
+
 </template>
 
 
 <script>
 import BarraTitulo from "../components/BarraTitulo.vue";
 import TarjetaArticulo from "../components/TarjetaArticulo.vue";
-import BarraFiltros from '../components/BarraFiltros.vue';
+import BarraFiltros from "../components/BarraFiltros.vue";
+import Store from "../store/index.js";
 
 export default {
   name: "inicio",
-  components: { BarraTitulo, TarjetaArticulo, BarraFiltros },
-  
+  components: { BarraTitulo, TarjetaArticulo, BarraFiltros, Store },
+  created: () => {
+    Store.dispatch("getImagenes");
+  },
+  computed: {
+    imagenes: () => {
+      return Store.state.imagenes;
+    },
+  },
 };
 </script>
 
 <style>
+#filtros {
+  margin-top: 5px;
+  margin-bottom: 5px;
+  height: 60px;
+}
 
-  #filtros{
-    margin-top: 5px;
-    margin-bottom: 5px;
-    height: 60px;
-  }
-
-  #contenido{
-    height: 300px;
-    background-color: greenyellow;
-  }
- 
-
+#contenido {
+  height: 200px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
 </style>

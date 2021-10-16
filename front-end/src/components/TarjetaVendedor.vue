@@ -107,6 +107,7 @@ export default {
     botones1: Boolean,
     botones2: Boolean,
   },
+  
 };
 </script>
 

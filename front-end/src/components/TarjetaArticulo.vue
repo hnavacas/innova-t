@@ -1,13 +1,13 @@
 <template>
   <!-- TARJETA PARA MOSTRAR LOS ARTICULOS DE LA PAGINA DE INICIO --->
   <v-container>
-    <v-card class="mx-auto" max-width="400">
+    <v-card class="mx-auto" max-width="350">
       <v-img
         class="white--text align-end"
         height="200px"
-        src="https://cdn.vuetifyjs.com/images/cards/docks.jpg"
+        :src="imagen.PicUrl"
       >
-        <v-card-title class="pa-2">Artículo 1</v-card-title>
+        <v-card-title class="pa-2">{{imagen.Name}}</v-card-title>
       </v-img>
       <v-card-title>Descripción</v-card-title>
       <v-card-subtitle class="pb-0">
@@ -29,7 +29,7 @@
 
       <v-card-actions>
         <v-spacer></v-spacer>
-        <v-btn class="orange white--text" v-on:click = 'adicionar()'> Comprar </v-btn>
+        <v-btn color="teal lighten-3" v-on:click = 'adicionar()'> Comprar </v-btn>
       </v-card-actions>
     </v-card>
   </v-container>
@@ -40,6 +40,8 @@ export default {
   name: "tarjeta-articulo",
   data: () => ({contar: 0
   }),
+
+  props:["imagen"],
 
   methods:{
   adicionar(){

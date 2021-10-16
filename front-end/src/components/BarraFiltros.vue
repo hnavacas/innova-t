@@ -1,7 +1,9 @@
 <template>
   <v-container fluid id="contenedor">
-    <v-row id="fila" align="center">
-      <v-col class="d-flex" cols="4" sm="3" id="col_cate">
+    <v-card max-width id="tarjeta">
+    <v-row id="fila">
+
+      <v-col class="d-flex" cols="3" sm="3" id="col_cate">
         <v-select
           :items="emprendedores"
           label=" Emprendedores "
@@ -10,7 +12,7 @@
         ></v-select>
       </v-col>
 
-      <v-col class="d-flex" cols="4" sm="3">
+      <v-col class="d-flex" cols="3" sm="3">
         <v-select
           :items="categorias"
           label=" Categorias "
@@ -19,14 +21,18 @@
         ></v-select>
       </v-col>
 
-      <v-col cols="4" sm="6" md="4">
+      <v-col cols="3" sm="6" md="4">
         <v-text-field label="Descripción" outlined dense></v-text-field>
       </v-col>
-      <v-btn id="btn1" >
+
+      <v-col>
+      <v-btn id="btn1" color="teal lighten-3" >
         <v-icon center>mdi-magnify</v-icon>
       </v-btn>
-      <v-btn id="btn2" color="teal lighten-1" text to = '/IngresarVendedor'>Vender </v-btn>
+      <v-btn id="btn2" color="teal lighten-3"  to = '/IngresarVendedor'>Vender </v-btn>
+      </v-col>
     </v-row>
+    </v-card>
   </v-container>
 </template>
 
@@ -48,11 +54,13 @@ export default {
 
 <style>
 
+#tarjeta{
+  margin-top: 0px;
+}
+
+
 #fila {
-  height: 60px;
-  border: 1px solid;
-  border-radius: 0px 0px 10px 10px;
-  border-color: aquamarine;
+  height: 75px;
 }
 
 #btn1 {

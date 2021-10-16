@@ -1,22 +1,31 @@
 <template>
-<v-container>
-<v-row>
+  <v-container>
+    <barra-titulo
+      :inicio="true"
+      :carro="false"
+      :ingresar="false"
+      :botones="true"
+    ></barra-titulo>
 
-</v-row>
+    <encabezado-reporte
+      :clientes="false"
+    ></encabezado-reporte>
 
-<v-row>
+    <contenido-reporte>
+      <!-- VISUALIZA EL CONTENIDO DEL REPORTE -->
+    </contenido-reporte>
 
 
- </v-row>  
   </v-container>
- 
-
 </template>
 
 <script>
+import BarraTitulo from "../components/BarraTitulo.vue";
+import ContenidoReporte from '../components/ContenidoReporte.vue';
+import EncabezadoReporte from '../components/EncabezadoReporte.vue';
 export default {
-
-}
+  components: { BarraTitulo, EncabezadoReporte, ContenidoReporte },
+};
 </script>
 
 <style>

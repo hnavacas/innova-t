@@ -1,6 +1,8 @@
 import Vue from 'vue'
 import Vuetify from 'vuetify'
 import VueRouter from 'vue-router'
+
+/*
 import Home from '../views/Home.vue'
 import Inicio from '../views/Inicio.vue'
 import Ingresar from '../views/Ingresar.vue'
@@ -10,56 +12,61 @@ import ArticulosVendedor from '../views/ArticulosVendedor.vue'
 import NuevoArticulo from '../views/NuevoArticulo.vue'
 import NuevaContraseña from '../views/NuevaContraseña.vue'
 import CarroCompras from '../views/CarroCompras.vue'
-
-
+*/
 
 Vue.use(VueRouter)
-
-
 
 const routes = [
   {
     path: '/',
     name: 'Inicio',
-    component: Inicio
+    component: ()=> import( '../views/Inicio.vue')
   },
   {
     path: '/Ingresar',
     name: 'Ingresar',
-    component: Ingresar
+    component: ()=> import('../views/Ingresar.vue')
   },
   {
     path: '/DatosVendedor',
     name: 'DatosVendedor',
-    component: DatosVendedor
+    component: ()=> import('../views/DatosVendedor.vue')
   },
   {
     path: '/IngresarVendedor',
     name: 'IngresarVendedor',
-    component: IngresarVendedor
+    component: ()=> import('../views/IngresarVendedor.vue')
   },
   {
     path: '/ArticulosVendedor',
     name: 'ArticulosVendedor',
-    component: ArticulosVendedor
+    component:()=> import('../views/ArticulosVendedor.vue')
   },
   {
     path: '/CarroCompras',
     name: 'CarroCompras',
-    component: CarroCompras
+    component: ()=> import('../views/CarroCompras.vue')
   },
   {
     path: '/NuevaContraseña',
     name: 'NuevaContraseña',
-    component: NuevaContraseña
+    component: ()=> import('../views/NuevaContraseña.vue')
   },
   {
     path: '/NuevoArticulo',
     name: 'NuevoArticulo',
-    component: NuevoArticulo
+    component: ()=> import('../views/NuevoArticulo.vue')
   },
-
-
+  {
+    path: '/ReporteVentas',
+    name: 'ReporteVentas',
+    component: ()=> import('../views/ReporteVentas.vue')
+  },
+  {
+    path: '/ReporteClientes',
+    name: 'ReporteClientes',
+    component: ()=> import('../views/ReporteClientes.vue')
+  },
 
   {
     path: '/about',

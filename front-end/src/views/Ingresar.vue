@@ -15,27 +15,30 @@
         <v-divider></v-divider>
         <v-card-subtitle>
           <v-text-field
-            label=" Correo electrónico "
+            label="Correo electrónico"
             outlined
             dense
           ></v-text-field>
           <v-text-field label=" Contraseña " outlined dense type="password"></v-text-field>
 
           <!-- OPCIONES DE INGRESO -->
-
+          <v-row>
+            <v-col>
             <router-link to="NuevaContraseña">Cambiar la contraseña</router-link>
-            <br>
+            </v-col>
+            <v-col>
             <router-link to="NuevaContraseña">Olvidó la contraseña</router-link>
-
+            </v-col>
+          </v-row>
 
           <v-divider></v-divider>
 
           <!-- BOTONES -->
           <div id="botones" class="text-center">
-            <v-btn class="ma-2" color="teal lighten-1" elevation=5>
+            <v-btn class="ma-2" color="teal lighten-3">
               Cancelar
             </v-btn>
-            <v-btn class="ma-2" color="teal lighten-1" elevation=5 text to ='/DatosVendedor'>
+            <v-btn class="ma-2" color="teal lighten-3" to ='/DatosVendedor'>
               Aceptar
             </v-btn>
           </div>

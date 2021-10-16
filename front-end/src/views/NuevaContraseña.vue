@@ -26,10 +26,10 @@
 
           <!-- BOTONES -->
           <div id="botones" class="text-center">
-            <v-btn class="ma-2" color="teal lighten-1" elevation=5>
+            <v-btn class="ma-2" color="teal lighten-3" >
               Cancelar
             </v-btn>
-            <v-btn class="ma-2" color="teal lighten-1" elevation=5 text to ='/NuevaContraseña'>
+            <v-btn class="ma-2" color="teal lighten-3"  to ='/NuevaContraseña'>
               Aceptar
             </v-btn>
 

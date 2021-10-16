@@ -68,7 +68,8 @@
                   auto-grow
                   outlined
                   rows="1"
-                  value="$120.000"
+                  value="120.000"
+                  prefix="$"
                 ></v-textarea>
               </v-col>
               <v-col v-col cols="12" sm="4" md="4">
@@ -77,7 +78,8 @@
                   auto-grow
                   outlined
                   rows="1"
-                  value="$5.000"
+                  prefix="$"
+                  value="5.000"
                 ></v-textarea>
               </v-col>
 
@@ -87,14 +89,16 @@
                   auto-grow
                   outlined
                   rows="1"
-                  value="$115.000"
+                  prefix="$"
+                  value="115.000"
                 ></v-textarea>
               </v-col>
             </v-row>
 
         </div>
         <v-card-actions>
-          <v-btn color="teal lighten-1" to="NuevoArticulo"> Nuevo articulo </v-btn>
+          <v-spacer></v-spacer>
+          <v-btn color="teal lighten-1" to="NuevoArticulo"> Adicionar </v-btn>
           <v-btn color="teal lighten-1"> Actualizar </v-btn>
           <v-btn color="teal lighten-1"> Cancelar </v-btn>
         </v-card-actions>

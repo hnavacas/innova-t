@@ -1,0 +1,8 @@
+Ejecutar
+Si no existe la carpeta node:
+npm install desde /front-end
+
+Para ejercurtar el entorno del localhost:
+npm run serve desde /front-end
+
+

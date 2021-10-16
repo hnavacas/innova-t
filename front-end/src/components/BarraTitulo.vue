@@ -109,7 +109,7 @@ export default {
 }
 
 #titulo {
-  font-size: 2rem;
+  font-size: 3rem;
 }
 
 #barra {
